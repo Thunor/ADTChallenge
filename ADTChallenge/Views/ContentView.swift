@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var episodes: [Episode]?
+    @State private var info: Episode.NetworkInfo.Info?
     @State private var currentPage: Int = 1
     
     var body: some View {
@@ -30,9 +31,13 @@ struct ContentView: View {
                         }
                         .onBecomingVisible {
                             if (episode.id ?? 1) % 20 == 0 {
-                                print("id: \(episode.id ?? 0)")
-                                currentPage += 1
-                                loadMore()
+                                if info?.info?.next != nil {
+                                    print("id: \(episode.id ?? 0)")
+                                    currentPage += 1
+                                    loadMore()
+                                } else {
+                                    print("No more data..")
+                                }
                             }
                         }
                     }
@@ -40,18 +45,20 @@ struct ContentView: View {
             }
             .padding()
             .onAppear {
-                RMAPI.getEpisodes(page: 1, completion: { model, message in
+                RMAPI.getEpisodes(page: 1, completion: { model, theInfo, message in
                     episodes = model?.results
+                    info = theInfo
                     print("added first page")
                 })
             }
         }
     }
     
+    /// Load next page of data
     func loadMore() {
-        
-        RMAPI.getEpisodes(page: currentPage, completion: { model, message in
+        RMAPI.getEpisodes(page: currentPage, completion: { model, theInfo, message in
             episodes?.append(contentsOf: model?.results ?? [])
+            info = theInfo
             print("added data")
         })
     }
