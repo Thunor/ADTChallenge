@@ -1,0 +1,11 @@
+# ADTChallenge
+Eric Freitas' ADT Challenge
+
+The app shows a list of Rick and Morty episodes, with each one being a NavigationLink. When you scroll to the bottom of the list, it will load another page (20 records) from the API. I prevent it from attempting to load more when it reaches the end of the data by checking the info.next item returned in the previous successful api call.  Clicking on the link will take you to the detail screen.  The detail screen does not have the list of characters.  I ran out of time to complete it.  However, here is what I would do to add the character list and the character detail screens:
+
+  - The architecture in this case is just MV (model view).  With more time I would add a view model, which would differ slightly from the models used for the API results.  In that case I would use a StateObject wrapping an ObservableObject with a @MainActor designator.  I've used this before, but there may be some issues with data loss in some use cases.  May use something else in the future.
+  - Create the Character model in the same way that I created the Episode model.  In addition, it would have a another struct that contains an arrayof the Character models such that they could be used as the data source for the List, or as a ForEach method.  The list could display the name and possibly a thumbnail size character image.  In other apps I have written, I have used both an Image and a Text view with the name of the character below the image, all on a horizontal scroll.
+  - It's not that pretty, I really need to clean up the UI and make it coherent and pretty.  I would generally take my cue from one of the ADT apps already in the app store as an example.
+  - I need to write tests, both unit and UI.  For the UI tests, I'd test both snapshots and modifiers.
+  - To cache the data for offline use, I would either store it using Core Data or Sqlite, or Realm.  Then modify the loading so that that it attempts to load from the database before defaulting to attempting to get it online.  If data was not available either online or in the db, I'd display an empty list with a message stating to try again later (maybe, or whatever the best UX message would be).
+  - I did not use any 3rd party frameworks for this, but did use a ViewModifier from a post on StackOverflow: https://stackoverflow.com/a/73038067/466197
