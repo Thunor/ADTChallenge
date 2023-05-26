@@ -4,6 +4,7 @@
 //
 //  Created by Eric Freitas on 5/26/23.
 //
+//  This is my own view modifier to change the background color with cornerradius and padding.
 
 import SwiftUI
 

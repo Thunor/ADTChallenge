@@ -4,6 +4,9 @@
 //
 //  Created by Eric Freitas on 5/26/23.
 //
+//  I used this StackOverflow answer to get this viewmodifier code:
+//    https://stackoverflow.com/a/73038067/466197
+//
 
 import Foundation
 import SwiftUI
@@ -31,7 +34,6 @@ private struct BecomingVisible: ViewModifier {
                     .onPreferenceChange(VisibleKey.self) { isVisible in
                         guard isVisible, let action else { return }
                         action()
-//                        action = nil
                     }
             }
         }
