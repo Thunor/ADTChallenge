@@ -29,7 +29,7 @@ struct ContentView: View {
                                 } label: {
                                     HStack {
                                         Text(episode.name ?? "")
-                                            .foregroundColor(.white)
+                                            .foregroundColor(.black)
                                         Spacer()
                                         Image(systemName: "chevron.right")
                                             .fontWeight(.heavy)
@@ -58,9 +58,8 @@ struct ContentView: View {
                         info = theInfo
                         print("added first page")
                     })
-                    
-//                    sounds.playRandom()
                 }
+                .navigationBarTitleDisplayMode(.large)
                 .navigationTitle("Episodes")
             }
             .background(Color.teal)
