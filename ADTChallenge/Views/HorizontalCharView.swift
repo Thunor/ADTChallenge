@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HorizontalCharView: View {
     var charList: [RMCharacter]?
-    @State private var selectedActor: String?
+    @State private var selectedChar: String?
     
     let columns = [
         GridItem(.adaptive(minimum: 100))
@@ -20,8 +20,8 @@ struct HorizontalCharView: View {
             /// Using LazyHStack uses about half the memory of HStack here.
             LazyVGrid(columns: columns) {
                 ForEach(charList ?? [], id: \.id) {currChar in
-                    Button {
-                        selectedActor = currChar.image
+                    NavigationLink {
+                        CharacterDetailView(rmChar: currChar)
                     } label: {
                         CharImageView(rmCharacter: currChar)
                     }

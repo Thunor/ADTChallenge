@@ -12,6 +12,7 @@ struct EpisodeDetailView: View {
     @State var detail: RMEpisode?
     @State private var rmCharacters: [RMCharacter] = []
     @State private var sounds = Sounds()
+    @State private var detailLoaded = false
     
     var body: some View {
         ZStack {
@@ -20,29 +21,13 @@ struct EpisodeDetailView: View {
                 .ignoresSafeArea()
             
             VStack(content: {
-                HStack {
-                    Text("\(detail?.name ?? "")")
-                    Spacer()
-                }
-                .font(.title)
-                .padding(10)
-                .padding(.horizontal)
+                InfoLineView(infoTxt: detail?.name ?? "")
+                    .font(.title)
                 
-                HStack {
-                    Text("air date: ")
-                    Spacer()
-                    Text("\(detail?.airDate ?? "")")
-                }
-                .padding(10)
-                .padding(.horizontal)
-                .isHidden(detail?.airDate == nil, remove: detail?.airDate == nil)
+                InfoLineView(title: "Air Date: ", infoTxt: detail?.airDate ?? "")
+                    .isHidden(detail?.airDate == nil, remove: detail?.airDate == nil)
                 
-                HStack {
-                    Text("Characters")
-                    Spacer()
-                }
-                .padding(10)
-                .padding(.horizontal)
+                InfoLineView(infoTxt: "Characters")
                 
                 HorizontalCharView(charList: rmCharacters)
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
@@ -55,23 +40,26 @@ struct EpisodeDetailView: View {
         .onAppear {
             sounds.playRandom()
             
-            RMAPI.getEpisodeDetail(episodeID: detail?.id ?? 0) { episode, message in
-                detail = episode
-                if let message = message {
-                    print("getEpisodeDetail: \(message)")
-                }
-                
-                for charURL in detail?.rmCharacters ?? [] {
-                    RMAPI.getCharDetails(characterURL: charURL) { rmChar, msg in
-                        if let rmChar = rmChar {
-                            self.rmCharacters.append(rmChar)
-                            print("character: \(rmChar.name ?? "")")
+            if detailLoaded == false {
+                RMAPI.getEpisodeDetail(episodeID: detail?.id ?? 0) { episode, message in
+                    detail = episode
+                    if let message = message {
+                        print("getEpisodeDetail: \(message)")
+                    }
+                    
+                    for charURL in detail?.rmCharacters ?? [] {
+                        RMAPI.getCharDetails(characterURL: charURL) { rmChar, msg in
+                            if let rmChar = rmChar {
+                                self.rmCharacters.append(rmChar)
+                                print("character: \(rmChar.name ?? "")")
+                            }
                         }
                     }
+                    
+                    detailLoaded = true
                 }
             }
         }
-        
         .navigationTitle(detail?.episode ?? "")
     }
 }
