@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var episodes: [Episode]?
-    @State private var info: Episode.NetworkInfo.Info?
+    @State private var episodes: [RMEpisode]?
+    @State private var info: RMEpisode.NetworkInfo.Info?
     @State private var currentPage: Int = 1
+    
+    
     
     var body: some View {
             
@@ -27,7 +29,7 @@ struct ContentView: View {
                                 } label: {
                                     HStack {
                                         Text(episode.name ?? "")
-                                            .foregroundColor(.white)
+                                            .foregroundColor(.black)
                                         Spacer()
                                         Image(systemName: "chevron.right")
                                             .fontWeight(.heavy)
@@ -57,6 +59,8 @@ struct ContentView: View {
                         print("added first page")
                     })
                 }
+                .navigationBarTitleDisplayMode(.large)
+                .navigationTitle("Episodes")
             }
             .background(Color.teal)
     }

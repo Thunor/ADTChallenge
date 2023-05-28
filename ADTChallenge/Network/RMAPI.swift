@@ -11,7 +11,7 @@ struct RMAPI {
     static let baseURL = "https://rickandmortyapi.com"
     static let classesURL = "/api/episode/"
     
-    static func getEpisodes(page: Int = 1, completion: @escaping (Episode.NetworkResult?, Episode.NetworkInfo.Info?, String?) -> ()) {
+    static func getEpisodes(page: Int = 1, completion: @escaping (RMEpisode.NetworkResult?, RMEpisode.NetworkInfo.Info?, String?) -> ()) {
         let page = "?page=\(page)"
         let wholeURL = URL(string: baseURL + classesURL + page)!
         var request = URLRequest(url: wholeURL)
@@ -21,16 +21,16 @@ struct RMAPI {
         
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
-            print(response!)
+//            print(response!)
             if let response = response as? HTTPURLResponse {
                 switch response.statusCode {
                     case 200...299:
                         // decode it
                         if let retData = data {
                             let decoder = JSONDecoder()
-                            let theModel: Episode.NetworkResult = try! decoder.decode(Episode.NetworkResult.self, from: retData)
-                            let theInfo: Episode.NetworkInfo.Info = try! decoder.decode(Episode.NetworkInfo.Info.self, from: retData)
-                            print(theInfo)
+                            let theModel: RMEpisode.NetworkResult = try! decoder.decode(RMEpisode.NetworkResult.self, from: retData)
+                            let theInfo: RMEpisode.NetworkInfo.Info = try! decoder.decode(RMEpisode.NetworkInfo.Info.self, from: retData)
+//                            print(theInfo)
 //                            print(theModel)
                             completion(theModel, theInfo, "success")
                         }
@@ -48,24 +48,23 @@ struct RMAPI {
         task.resume()
     }
     
-    static func getEpisodeDetail(episodeID: Int = 1, completion: @escaping (Episode?, String?) -> ()) {
+    static func getEpisodeDetail(episodeID: Int = 1, completion: @escaping (RMEpisode?, String?) -> ()) {
         let episodeID = "\(episodeID)"
         let wholeURL = URL(string: baseURL + classesURL + episodeID)!
         var request = URLRequest(url: wholeURL)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
     
-        
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
-            print(response!)
+//            print(response!)
             if let response = response as? HTTPURLResponse {
                 switch response.statusCode {
                     case 200...299:
                         // decode it
                         if let retData = data {
                             let decoder = JSONDecoder()
-                            let theModel: Episode = try! decoder.decode(Episode.self, from: retData)
+                            let theModel: RMEpisode = try! decoder.decode(RMEpisode.self, from: retData)
 //                            print(theModel)
                             completion(theModel, "success")
                         }
@@ -81,5 +80,50 @@ struct RMAPI {
         })
         
         task.resume()
+    }
+    
+//    "characters": [
+//      "https://rickandmortyapi.com/api/character/1",
+//      "https://rickandmortyapi.com/api/character/2",
+//      //...
+//    ],
+    
+    /// Get a single character record
+    /// - Parameters:
+    ///   - characterURL: The url to the record.
+    ///   - completion: The closure returns the Character and "success", or nil and an error message.
+    static func getCharDetails(characterURL: String, completion: @escaping (RMCharacter?, String?) -> ()) {
+        let wholeURL = URL(string: characterURL)
+        if let wholeCharURL = wholeURL {
+            var request = URLRequest(url: wholeCharURL)
+            request.httpMethod = "GET"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let session = URLSession.shared
+            let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
+//                print(response!)
+                if let response = response as? HTTPURLResponse {
+                    switch response.statusCode {
+                        case 200...299:
+                            // decode it
+                            if let retData = data {
+                                let decoder = JSONDecoder()
+                                let theModel: RMCharacter = try! decoder.decode(RMCharacter.self, from: retData)
+                                //                            print(theModel)
+                                completion(theModel, "success")
+                            }
+                        default:
+                            if let error = error {
+                                print(error)
+                            } else {
+                                print("Error")
+                            }
+                            completion(nil, "got an error")
+                    }
+                }
+            })
+            
+            task.resume()
+        }
     }
 }
