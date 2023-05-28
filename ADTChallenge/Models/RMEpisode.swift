@@ -35,12 +35,12 @@ import Foundation
  }
  */
 
-struct Episode: Codable {
+struct RMEpisode: Codable {
     var id: Int?
     var name: String?
     var airDate: String?
     var episode: String?
-    var characters: [String]?
+    var rmCharacters: [String]?
     var url: String?
     var created: String?
     
@@ -59,7 +59,7 @@ struct Episode: Codable {
         self.name = name
         self.airDate = airDate
         self.episode = episode
-        self.characters = characters
+        self.rmCharacters = characters
         self.url = url
         self.created = created
     }
@@ -70,7 +70,7 @@ struct Episode: Codable {
         self.name = try container.decodeIfPresent(String.self, forKey: .name)
         self.airDate = try container.decodeIfPresent(String.self, forKey: .airDate)
         self.episode = try container.decodeIfPresent(String.self, forKey: .episode)
-        self.characters = try container.decode([String]?.self, forKey: .characters)
+        self.rmCharacters = try container.decode([String]?.self, forKey: .characters)
         self.url = try container.decodeIfPresent(String.self, forKey: .url)
         self.created = try container.decodeIfPresent(String.self, forKey: .created)
     }
@@ -81,33 +81,19 @@ struct Episode: Codable {
         try container.encodeIfPresent(self.name, forKey: .name)
         try container.encodeIfPresent(self.airDate, forKey: .airDate)
         try container.encodeIfPresent(self.episode, forKey: .episode)
-        try container.encode(self.characters, forKey: .characters)
+        try container.encode(self.rmCharacters, forKey: .characters)
         try container.encodeIfPresent(self.url, forKey: .url)
         try container.encodeIfPresent(self.created, forKey: .created)
     }
 }
 
-extension Episode {
+extension RMEpisode {
     struct NetworkResult: Codable {
-        var results: [Episode]?
-        
-        enum CodingKeys: CodingKey {
-            case results
-        }
-        
-        init(from decoder: Decoder) throws {
-            let container: KeyedDecodingContainer<Episode.NetworkResult.CodingKeys> = try decoder.container(keyedBy: Episode.NetworkResult.CodingKeys.self)
-            self.results = try container.decodeIfPresent([Episode].self, forKey: Episode.NetworkResult.CodingKeys.results)
-        }
-        
-        func encode(to encoder: Encoder) throws {
-            var container = encoder.container(keyedBy: Episode.NetworkResult.CodingKeys.self)
-            try container.encodeIfPresent(self.results, forKey: Episode.NetworkResult.CodingKeys.results)
-        }
+        var results: [RMEpisode]?
     }
 }
 
-extension Episode {
+extension RMEpisode {
     struct NetworkInfo: Codable {
         var count: Int?
         var pages: Int?

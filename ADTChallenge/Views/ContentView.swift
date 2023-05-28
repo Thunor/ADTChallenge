@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var episodes: [Episode]?
-    @State private var info: Episode.NetworkInfo.Info?
+    @State private var episodes: [RMEpisode]?
+    @State private var info: RMEpisode.NetworkInfo.Info?
     @State private var currentPage: Int = 1
+    
+    
     
     var body: some View {
             
@@ -56,7 +58,10 @@ struct ContentView: View {
                         info = theInfo
                         print("added first page")
                     })
+                    
+//                    sounds.playRandom()
                 }
+                .navigationTitle("Episodes")
             }
             .background(Color.teal)
     }
