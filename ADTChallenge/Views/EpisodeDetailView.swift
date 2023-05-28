@@ -29,7 +29,7 @@ struct EpisodeDetailView: View {
                 
                 InfoLineView(infoTxt: "Characters")
                 
-                HorizontalCharView(charList: rmCharacters)
+                GridCharacterView(charList: rmCharacters)
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                 
                 Spacer()

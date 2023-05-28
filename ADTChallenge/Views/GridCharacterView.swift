@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HorizontalCharView: View {
+struct GridCharacterView: View {
     var charList: [RMCharacter]?
     @State private var selectedChar: String?
     
@@ -82,6 +82,6 @@ struct HorizontalCharView_Previews: PreviewProvider {
             created: "2017-11-04T18:48:46.250Z"
         )
         
-        HorizontalCharView(charList: [previewCharacter1, previewCharacter2, previewCharacter3, previewCharacter4])
+        GridCharacterView(charList: [previewCharacter1, previewCharacter2, previewCharacter3, previewCharacter4])
     }
 }
