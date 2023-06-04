@@ -18,6 +18,7 @@ struct RMAPI {
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
     
+        // attempt to download the episodes.  If
         
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in

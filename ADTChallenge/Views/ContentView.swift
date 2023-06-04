@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
     @State private var episodes: [RMEpisode]?
     @State private var info: RMEpisode.NetworkInfo.Info?
     @State private var currentPage: Int = 1
