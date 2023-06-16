@@ -27,12 +27,12 @@ struct ContentView: View {
                                 } label: {
                                     HStack {
                                         Text(episode.name ?? "")
-                                            .foregroundColor(.white)
+                                            .foregroundColor(.black)
                                         Spacer()
                                         Image(systemName: "chevron.right")
                                             .fontWeight(.heavy)
                                     }
-                                    .caption(backgroundColor: .gray)
+                                    .caption(backgroundColor: .mint)
                                 }
                                 .onBecomingVisible {
                                     if (episode.id ?? 1) % 20 == 0 {
@@ -58,7 +58,7 @@ struct ContentView: View {
                     })
                 }
             }
-            .background(Color.teal)
+//            .background(Color.teal)
     }
     
     /// Load next page of data

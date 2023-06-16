@@ -57,7 +57,7 @@ struct EpisodeDetailView: View {
                 
                 Spacer()
             })
-            .foregroundColor(.white)
+            .foregroundColor(.black)
         }
         .accentColor(.orange)
         .onAppear {

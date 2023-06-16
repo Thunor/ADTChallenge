@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D4BDADCB-AD79-4F41-9D68-622709A258CF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B54AA684-F57E-47C2-ADE8-2846D9AF39D2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ADTChallenge/Network/RMAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getEpisodes(page:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58A36583-1402-4B7A-9006-22724F5F6FF6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ADTChallenge/Network/RMAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getEpisodes(page:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "58A36583-1402-4B7A-9006-22724F5F6FF6 - 84dc579246def583"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ADTChallenge.RMAPI.getClasses(completion: (Swift.Optional&lt;ADTChallenge.Episode.NetworkResult&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ADTChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfreitas/Documents/Dev/iOS/ADTChallenge/ADTChallenge/Network/RMAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "952">
+               </Location>
+               <Location
+                  uuid = "58A36583-1402-4B7A-9006-22724F5F6FF6 - 65ea14b63668548b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static ADTChallenge.RMAPI.getClasses(completion: (Swift.Optional&lt;ADTChallenge.Episode.NetworkResult&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ADTChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfreitas/Documents/Dev/iOS/ADTChallenge/ADTChallenge/Network/RMAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "88CE4E45-7BF2-47C3-B6CC-8981827D2D81"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ADTChallenge/Views/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C1E0AC07-7F37-4DAC-B191-2FA001BC2033"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ADTChallenge/Views/EpisodeDetail.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "641CAF23-5926-4EF5-B8CE-2EB3043E7255"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ADTChallenge/Audio/SoundPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "playRandom()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "641CAF23-5926-4EF5-B8CE-2EB3043E7255 - 4e064118e44177c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ADTChallenge.Sounds.playRandom() -&gt; ()"
+                  moduleName = "ADTChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfreitas/Documents/Dev/iOS/ADTChallenge/ADTChallenge/Audio/SoundPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "368">
+               </Location>
+               <Location
+                  uuid = "641CAF23-5926-4EF5-B8CE-2EB3043E7255 - 4e064118e44177c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ADTChallenge.Sounds.playRandom() -&gt; ()"
+                  moduleName = "ADTChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfreitas/Documents/Dev/iOS/ADTChallenge/ADTChallenge/Audio/SoundPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "716">
+               </Location>
+               <Location
+                  uuid = "641CAF23-5926-4EF5-B8CE-2EB3043E7255 - 4e064118e44177c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ADTChallenge.Sounds.playRandom() -&gt; ()"
+                  moduleName = "ADTChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfreitas/Documents/Dev/iOS/ADTChallenge/ADTChallenge/Audio/SoundPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "1168">
+               </Location>
+               <Location
+                  uuid = "641CAF23-5926-4EF5-B8CE-2EB3043E7255 - 4e064118e44177c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ADTChallenge.Sounds.playRandom() -&gt; ()"
+                  moduleName = "ADTChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfreitas/Documents/Dev/iOS/ADTChallenge/ADTChallenge/Audio/SoundPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "1036">
+               </Location>
+               <Location
+                  uuid = "641CAF23-5926-4EF5-B8CE-2EB3043E7255 - 4e064118e44177c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ADTChallenge.Sounds.playRandom() -&gt; ()"
+                  moduleName = "ADTChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfreitas/Documents/Dev/iOS/ADTChallenge/ADTChallenge/Audio/SoundPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "1104">
+               </Location>
+               <Location
+                  uuid = "641CAF23-5926-4EF5-B8CE-2EB3043E7255 - 970fce36077842b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ADTChallenge.Sounds.playRandom() -&gt; ()"
+                  moduleName = "ADTChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfreitas/Documents/Dev/iOS/ADTChallenge/ADTChallenge/Audio/SoundPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "672">
+               </Location>
+               <Location
+                  uuid = "641CAF23-5926-4EF5-B8CE-2EB3043E7255 - 970fce36077842b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ADTChallenge.Sounds.playRandom() -&gt; ()"
+                  moduleName = "ADTChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfreitas/Documents/Dev/iOS/ADTChallenge/ADTChallenge/Audio/SoundPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "1020">
+               </Location>
+               <Location
+                  uuid = "641CAF23-5926-4EF5-B8CE-2EB3043E7255 - 970fce36077842b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ADTChallenge.Sounds.playRandom() -&gt; ()"
+                  moduleName = "ADTChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfreitas/Documents/Dev/iOS/ADTChallenge/ADTChallenge/Audio/SoundPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "676">
+               </Location>
+               <Location
+                  uuid = "641CAF23-5926-4EF5-B8CE-2EB3043E7255 - 970fce36077842b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ADTChallenge.Sounds.playRandom() -&gt; ()"
+                  moduleName = "ADTChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfreitas/Documents/Dev/iOS/ADTChallenge/ADTChallenge/Audio/SoundPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "1016">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "893F24B5-1855-4A55-BD4C-91913FE9C9C8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ADTChallenge/Audio/SoundPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "playRandom()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "893F24B5-1855-4A55-BD4C-91913FE9C9C8 - 970fce36077843da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ADTChallenge.Sounds.playRandom() -&gt; ()"
+                  moduleName = "ADTChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfreitas/Documents/Dev/iOS/ADTChallenge/ADTChallenge/Audio/SoundPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "1452">
+               </Location>
+               <Location
+                  uuid = "893F24B5-1855-4A55-BD4C-91913FE9C9C8 - 970fce36077843da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ADTChallenge.Sounds.playRandom() -&gt; ()"
+                  moduleName = "ADTChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfreitas/Documents/Dev/iOS/ADTChallenge/ADTChallenge/Audio/SoundPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "1652">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49D4099F-F74E-455C-9D2F-04965F38F8CF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ADTChallenge/CoreData/PersistenceController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "save()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

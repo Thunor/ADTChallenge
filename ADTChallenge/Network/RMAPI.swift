@@ -31,7 +31,6 @@ struct RMAPI {
                             let theModel: Episode.NetworkResult = try! decoder.decode(Episode.NetworkResult.self, from: retData)
                             let theInfo: Episode.NetworkInfo.Info = try! decoder.decode(Episode.NetworkInfo.Info.self, from: retData)
                             print(theInfo)
-//                            print(theModel)
                             completion(theModel, theInfo, "success")
                         }
                     default:
